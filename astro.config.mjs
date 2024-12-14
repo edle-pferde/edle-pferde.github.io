@@ -1,5 +1,9 @@
-// @ts-check
+import keystatic from '@keystatic/astro'
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+import react from '@astrojs/react';
+import markdoc from '@astrojs/markdoc';
+
+export default defineConfig({
+  integrations: [react(), markdoc(), keystatic()]
+});
