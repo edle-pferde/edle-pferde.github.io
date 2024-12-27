@@ -5,7 +5,7 @@ export const keystaticHorsesConfig = collection({
   columns: ['name', 'birth_year'],
   label: 'Horses',
   slugField: 'name',
-  path: 'content/horses/*',
+  path: 'src/content/horses/*',
   format: { contentField: 'content' },
   schema: {
     name: fields.slug({ name: { label: 'Full name' } }),

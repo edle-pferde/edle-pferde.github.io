@@ -3,7 +3,7 @@ import { fields, singleton } from '@keystatic/core'
 export const contentBase = 'content/texts'
 export const keystaticTextsConfig = singleton({
   label: 'Texts',
-  path: 'content/texts',
+  path: 'src/content/texts',
   schema: {
     homepage_about_text: fields.text({
       label: 'Homepage: About text',

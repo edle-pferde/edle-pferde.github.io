@@ -6,7 +6,7 @@ export const keystaticPostsConfig = collection({
   label: 'Posts',
   entryLayout: 'content',
   slugField: 'title',
-  path: 'content/posts/*',
+  path: 'src/content/posts/*',
   format: { contentField: 'content' },
   schema: {
     title: fields.slug({ name: { label: 'Title' } }),

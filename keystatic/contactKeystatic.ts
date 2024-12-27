@@ -3,7 +3,7 @@ import { fields, singleton } from '@keystatic/core'
 export const contentBase = 'content/contact'
 export const keystaticContactConfig = singleton({
   label: 'Contact',
-  path: 'content/contact',
+  path: 'src/content/contact',
   format: { data: 'json' },
   schema: {
     email_address: fields.text({
