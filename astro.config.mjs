@@ -40,6 +40,11 @@ export default defineConfig({
       filter: (page) => !page.endsWith('README/'),
     }),
   ],
+  vite: {
+    define: {
+      'process.env': process.env
+    }
+  },
   // On Netlify and during development we use `hybrid`, on Github Pages we usd `static`.
   // Using static makes sure features like Astros redirecting work as expected.
   // Docs https://docs.astro.build/en/basics/rendering-modes/
