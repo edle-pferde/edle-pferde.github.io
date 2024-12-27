@@ -1,6 +1,6 @@
 import { collection, fields } from '@keystatic/core'
 
-export const contentBase = 'src/content/posts'
+export const contentBase = 'content/posts'
 export const keystaticPostsConfig = collection({
   columns: ['title', 'date'],
   label: 'Posts',

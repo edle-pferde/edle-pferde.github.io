@@ -1,6 +1,6 @@
 import { fields, singleton } from '@keystatic/core'
 
-export const contentBase = 'src/content/texts'
+export const contentBase = 'content/texts'
 export const keystaticTextsConfig = singleton({
   label: 'Texts',
   path: 'content/texts',
