@@ -1,0 +1,21 @@
+---
+export const prerender = true
+//
+import { getCollection, render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const horses = await getCollection('horses')
+
+  return horses.map((horse) => ({
+    params: { slug: horse.id.replace('.mdx', '') },
+    props: horse,
+  }))
+}
+
+const horse = Astro.props
+const { Content } = await render(horse)
+---
+
+<h1>{horse.data.title}</h1>
+<Content />
+<pre>{JSON.stringify(horse)}</pre>

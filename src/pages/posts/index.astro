@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content'
+
+const posts = await getCollection('posts')
+---
+
+<ul>
+  {
+    posts.map((post) => {
+      return (
+        <li>
+          <a href={`/posts/${post.id.replace('.mdx', '')}`}>{post.data.title}</a>
+        </li>
+      )
+    })
+  }
+</ul>

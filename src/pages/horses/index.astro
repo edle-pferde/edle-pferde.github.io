@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content'
+
+const horses = await getCollection('horses')
+---
+
+<ul>
+  {
+    horses.map((horse) => {
+      return (
+        <li>
+          <a href={`/horses/${horse.id.replace('.mdx', '')}`}>{horse.data.name}</a>
+        </li>
+      )
+    })
+  }
+</ul>
